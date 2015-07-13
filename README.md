@@ -2,7 +2,7 @@ undefined-or-null
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
-> Validates if a value is undefined or null.
+> Validates if a value is `undefined` or `null`.
 
 
 ## Installation
@@ -17,18 +17,49 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 ## Usage
 
 ``` javascript
-var foo = require( 'validate.io-undefined-or-null' );
+var isUndefinedOrNull = require( 'validate.io-undefined-or-null' );
 ```
 
-#### foo( value )
+#### isUndefinedOrNull( value )
 
-What does this function do?
+Validates if a `value` is `undefined` or `null`.
+
+``` javascript
+var value = null;
+
+var bool = isUndefinedOrNull( value );
+// returns true
+```
 
 
 ## Examples
 
 ``` javascript
-var foo = require( 'validate.io-undefined-or-null' );
+var isUndefinedOrNull = require( 'validate.io-undefined-or-null' );
+
+console.log( isUndefinedOrNull( undefined ) );
+// returns true
+
+console.log( isUndefinedOrNull( void 0 ) );
+// returns true
+
+console.log( isUndefinedOrNull( null ) );
+// returns true
+
+console.log( isUndefinedOrNull( false ) );
+// returns false
+
+console.log( isUndefinedOrNull( {} ) );
+// returns false
+
+console.log( isUndefinedOrNull( '' ) );
+// returns false
+
+console.log( isUndefinedOrNull( 0 ) );
+// returns false
+
+console.log( isUndefinedOrNull( [] ) );
+// returns false
 ```
 
 To run the example code from the top-level application directory,

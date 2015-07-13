@@ -26,7 +26,14 @@
     "validate.io",
     "validate",
     "validation",
-    "validator"
+    "validator",
+    "valid",
+    "is",
+    "undefined",
+    "null",
+    "isundefined",
+    "isnull",
+    "isvalid"
   ],
   "bugs": {
     "url": "https://github.com/validate-io/undefined-or-null/issues"
